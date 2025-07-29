@@ -1,18 +1,18 @@
+<!-- レクと変わらず（ProductListがQuizListに）-->
+
 <template>
-  <div class="home">
-    <img alt="Vue logo" src="../assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js App"/>
-  </div>
+  <v-container>
+    <QuizList />
+  </v-container>
 </template>
 
 <script>
-// @ is an alias to /src
-import HelloWorld from '@/components/HelloWorld.vue'
+  import QuizList from '@/components/QuizList.vue' // クイズコンポーネントを読み込み
 
-export default {
-  name: 'HomeView',
-  components: {
-    HelloWorld
+  export default {
+    name: 'HomeView', // このファイルの名前（Vue DevToolsなどで表示される）
+    components: {
+      QuizList,     // 上で読み込んだ ProductList をこのテンプレート内で使えるようにする
+    },
   }
-}
 </script>
